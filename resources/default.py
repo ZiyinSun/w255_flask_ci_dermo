@@ -6,4 +6,7 @@ class DefaultResource(Resource):
     def get(self):
         return {"status": "success", "data": {"msg": "Hello World"}}
 
+#    def post(self):
+#        return {"status": "success", "data": {"msg": "Hello World"}}
+
 api.add_resource(DefaultResource, "/", endpoint="home")
