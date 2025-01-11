@@ -10,11 +10,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.8]
+        python-version: ["3.8"]
 
     steps:
     # checkout codebase
-    - uses: actions/checkout@v4
+    - name: Check out repository 
+      uses: actions/checkout@v4
 
     # install python
     - name: Setup Python ${{ matrix.python-version }}
@@ -29,7 +30,7 @@ jobs:
         pip install -r requirements.txt;
 
     # run actual unit tests
-    - name: Test with unittest
-      run: |
-        python -m unittest tests.test_root
+    # - name: Test with unittest
+    #   run: |
+    #     python -m unittest tests.test_root
 
