@@ -14,12 +14,12 @@ jobs:
 
     steps:
     # checkout codebase
-    - name: Check out repository 
-      uses: actions/checkout@v4
+    # - name: Check out repository 
+    - uses: actions/checkout@v2
 
     # install python
     - name: Setup Python ${{ matrix.python-version }}
-      uses: action/setup-python@v4
+      uses: action/setup-python@v2
       with: 
         python-version: ${{ matrix.python-version }}
  
