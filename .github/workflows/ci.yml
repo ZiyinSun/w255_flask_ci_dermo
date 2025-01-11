@@ -1,8 +1,13 @@
 name: Continuous Integration
 
+# on:
+#   push:
+#     braches: [ master ]
+
 on:
-  push:
-    braches: [ master ]
+  pull_request:
+    branches:
+      - master
 
 jobs:
   run_tests:
